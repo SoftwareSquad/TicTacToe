@@ -1,0 +1,160 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+html
+{
+  background-color: black;
+  color: white;
+}
+.cell
+{
+  display: inline-block;
+  *display: inline; zoom: 1;
+  vertical-align: top; font-size: 12px;
+  width: 150px;
+  height: 150px;
+  margin: 0px;
+  padding: 0px;
+  margin-right: -4px;
+}
+
+#c1-1{
+  border-bottom: 2px orangered solid;
+  border-right: 2px orangered solid;
+}
+
+#c1-2{
+  border-bottom: 2px orangered solid;
+  border-right: 2px orangered solid;
+  border-left: 2px orangered solid;
+}
+
+#c1-3{
+  border-bottom: 2px orangered solid;
+  border-left: 2px orangered solid;
+
+}
+
+#c2-1{
+  border-top: 2px orangered solid;
+  border-bottom: 2px orangered solid;
+  border-right: 2px orangered solid;
+}
+
+#c2-2{
+  border-top: 2px orangered solid;
+  border-bottom: 2px orangered solid;
+  border-right: 2px orangered solid;
+  border-left: 2px orangered solid;
+}
+
+
+#c2-3{
+  border-top: 2px orangered solid;
+  border-bottom: 2px orangered solid;
+  border-left: 2px orangered solid;
+
+}
+
+#c3-1{
+  border-top: 2px orangered solid;
+  border-right: 2px orangered solid;
+}
+
+#c3-2{
+  border-top: 2px orangered solid;
+  border-right: 2px orangered solid;
+  border-left: 2px orangered solid;
+}
+
+#c3-3{
+  border-top: 2px orangered solid;
+  border-left: 2px orangered solid;
+}
+
+/* game */
+.game-scoreX{
+  margin-top: 30px;
+  float: left;
+  list-style-type: none;
+  font-size: 30px;
+}
+.game-scoreO{
+  margin-top: 30px;
+  float: right;
+  list-style-type: none;
+  font-size: 30px;
+}
+
+.game-score li{
+  margin-bottom: 20px;
+}
+
+.game-score li div{
+  display: inline;
+}
+
+.game-current-player{
+  float: middle;
+  margin-right: 40px;
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+.game-current-player div{
+  display: inline;
+}
+
+.game{
+  text-align: center;
+  color: white;
+  width: 700px;
+  margin: 0 auto;
+  padding: auto;
+}
+
+.game-text{
+  font-size: 70px;
+  font-weight: lighter;
+  padding-top: 30px;
+  margin: 0px;
+}
+
+.cell{
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 0px;
+  background-color: black;
+  color: white;
+}
+
+/* Allt með að animate-a takkana */
+@keyframes to_black {
+    from {background-color: black;color: white}
+    to {background-color: white;color: black}
+}
+
+@keyframes to_white {
+    from {background-color: white;color: black}
+    to {background-color: black;color: white}
+}
+
+.cell:hover{
+  animation-name: to_black;
+  animation-duration: 0.5s;
+  background-color: white;
+  color: black;
+}
+
+.cell:not(:hover){
+  animation-name: to_white;
+  animation-duration: 0.5s;
+  background-color: black;
+  color: white;
+}
+
+.navbar{
+background-color: orangered;
+}
