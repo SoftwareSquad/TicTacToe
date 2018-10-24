@@ -24,3 +24,56 @@ module.exports.changeCell = function(x, y){
 module.exports.changePlayer = function(player){    
     return (player == 'X')?'O':'X';
 }
+
+//checks if anyone has won
+//returns [true,false] if X won else [false,true] if O won
+//returns [true, true] if draw
+module.exports.hasWon = function(){
+    //all possible winning permuations
+    var possibilaties = [
+        //diagonal
+        [[0,0], [1,1], [2,2]], 
+        [[2,0], [1,1], [0,2]],
+        //vertical
+        [[0,0], [0,1], [0,2]],
+        [[1,0], [1,1], [1,2]],
+        [[2,0], [2,1], [2,2]],
+        //horizontal
+        [[0,0], [1,0], [2,0]],
+        [[0,1], [1,1], [2,1]],
+        [[0,2], [1,2], [2,2]]
+    ];
+
+    if(checkForDraw(gameStatus)){
+        return [true, true];
+    }
+
+    return [false, false];
+}
+
+//resets the game status
+module.exports.reset = function(){
+    gameStatus = [
+        ['','',''],
+        ['','',''],
+        ['','','']
+    ];
+
+    currentPlayer = 'X';
+}
+
+//checks if game is a draw
+function checkForDraw(status){
+    var num = 0;
+
+    for(var i = 0; i < 3; i++){
+        for(var j = 0; j < 3; j++){
+            if(status[i][j] != '')
+                num++;
+        }
+    }
+
+    if(num == 9)
+        return true;
+    return false;
+}
