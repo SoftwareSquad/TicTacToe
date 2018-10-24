@@ -11,3 +11,14 @@ This project is not about Node or some other technology used in the project. It'
 - Continuous integration
 - Continuous deployment (using heroku)
 - Git and the various workflows associated with git (we use branching wokflow)
+
+### Further information
+- [Development manual](https://github.com/SoftwareSquad/TicTacToe/blob/documents/docs/development_manual.md "Development manual page")
+- [Administrator manual](https://github.com/SoftwareSquad/TicTacToe/blob/documents/docs/administrator_manual.md "Development manual page")
+
+### Group members - SoftwareSquad
+- Ívar Óli Sigurðsson
+- Margrét Vala Björgvinsdóttir
+- Arna Björg Auðunsdóttir
+- Anna Margrét Jónasdóttir
+- Þorbjörg Hekla Ingólfsdóttir
