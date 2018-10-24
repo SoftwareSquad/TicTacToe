@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Container holding the actual game board -->
+    
+    <div class="game-scoreX">
+            <H2>X'S SCORE: <div id="x-score">0</div></H2>
+        </div>
+
+        <div class="game-scoreO">
+            <H2>O'S SCORE: <div id="x-score">0</div></H2>
+        </div>
+
+
+    <div class="game">
+        <nav class="navbar navbar-default">
+            <h1>TIC TAC TOE</h1>
+          </nav>
+        <!-- Row in the game board -->
+        <div class="row" id="row-1">
+            <!-- individual cell in the game board -->
+            <div class="cell" id="c1-1">
+                <h1 class="game-text"></h1>
+            </div>
+            <div class="cell" id="c1-2">
+                <h1 class="game-text"></h1>
+            </div>
+            <div class="cell" id="c1-3">
+                <h1 class="game-text"></h1>
+            </div>
+        </div>
+        <div class="row" id="row-2">
+            <div class="cell" id="c2-1">
+                <h1 class="game-text"></h1>
+            </div>
+            <div class="cell" id="c2-2">
+                <h1 class="game-text"></h1>
+            </div>
+            <div class="cell" id="c2-3">
+                <h1 class="game-text"></h1>
+            </div>
+        </div>
+        <div class="row" id="row-3">
+            <div class="cell" id="c3-1">
+                <h1 class="game-text"></h1>
+            </div>
+            <div class="cell" id="c3-2">
+                <h1 class="game-text"></h1>
+            </div>
+            <div class="cell" id="c3-3">
+                <h1 class="game-text"></h1>
+            </div>
+        </div>
+        <div class="game-current-player">
+                <h1>IT'S <div id="player-turn">X</div>'S TURN</h1>
+            </div>
+    
+        <!--<div class="overlay">
+                <h1>THE WINNER IS: <div id="winner"></div></h1>
+                <button type="button" name="btn-play-again" class="btn-play-again">PLAY AGAIN</button>
+              </div>-->
+    </div>
+    
+
+    <script type="text/javascript" src="/lib/jquery.min.js"></script></body>
+    <script type="text/javascript" src="main.min.js"></script></body>
+</body>
+
+</html>
