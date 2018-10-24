@@ -2,10 +2,10 @@
 
 ### Programs
 To run the TicTacTo game, the following programs are needed:
- - Node
-Also needed to run the program:
--Git Bash(for Windows) or Terminal(for Mac OS)
--You also need to create an account on Github
+ - Node 
+ Also needed to run the program:
+- Git Bash(for Windows) or Terminal(for Mac OS)
+- You also need to create an account on Github
 ### Installation
 To install Node please click here: 
 [Node installation](https://nodejs.org/en/download/)
