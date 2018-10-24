@@ -1,3 +1,4 @@
+
 /**
  * Determins who's turn it is
  * Holds the game status
@@ -48,7 +49,7 @@ module.exports.hasWon = function(){
         return [true, true];
     }
 
-    return [false, false];
+    return [checkForPossibilities(possibilaties, 'X'),checkForPossibilities(possibilaties, 'O')];
 }
 
 //resets the game status
@@ -75,5 +76,24 @@ function checkForDraw(status){
 
     if(num == 9)
         return true;
+    return false;
+}
+
+function checkForPossibilities(possibilaties, player){
+    for(var i = 0; i < possibilaties.length; i++){
+        var foundPossiblity = true;
+
+        for(var j = 0; j < possibilaties[i].length; j++){
+            var x = possibilaties[i][j][0];
+            var y = possibilaties[i][j][1];
+
+            if(gameStatus[x][y] != player)
+                    foundPossiblity = false;
+        }
+
+        if(foundPossiblity)
+            return true;
+    }
+
     return false;
 }
