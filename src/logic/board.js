@@ -1,20 +1,5 @@
 const game = require("./game");
 
-<<<<<<< HEAD
-(() => {
-    var playerOne = 'X';
-    var playerTwo = 'Y';
-    var currentPlayer = playerOne;
-    var scoreForPlayer1 = 0;
-    var scoreForPlayer2 = 0;
-    var resetButton = document.getElementById('reset-button');
-    var cellsListener = document.getElementById('cell');
-
-    function setText(msg) {
-        document.getElementById("message").innerText = msg;
-    }
-})();
-=======
 let state;
 let hasWon;
 let counter;
@@ -60,4 +45,3 @@ function resetGame() {
     init();
 }
 
->>>>>>> 8091adc3fdc167c12ce17b8ca77f391bae96fea2
