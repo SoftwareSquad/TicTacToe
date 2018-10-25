@@ -96,4 +96,4 @@ function checkForPossibilities(possibilaties, player){
     }
 
     return false;
-}
+} 
