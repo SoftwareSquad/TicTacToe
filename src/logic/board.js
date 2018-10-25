@@ -20,8 +20,8 @@ const checkClick = (event) => {
 }
 
 module.exports.getCoords = function(string){
-    let x = string.substring(1, 2);
-    let y = string.substring(3, 4);
+    let x = parseInt(string.substring(1, 2));
+    let y = parseInt(string.substring(3, 4));
 
     return [x, y];
 }
