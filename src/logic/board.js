@@ -14,7 +14,14 @@ function init() {
     counter = 0;
 }
 
+const checkClick = (event) => {
+    const id = event.id;
+    let x = id.substring(1, 2);
+    let y = id.substring(3, 4);
+}
+
 function resetGame() {
     game.reset();
     init();
 }
+
