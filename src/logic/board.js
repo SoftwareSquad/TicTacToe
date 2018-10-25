@@ -5,18 +5,15 @@ let hasWon;
 let counter;
 
 module.exports.init = function() {
-    var classname = document.getElementsByClassName("cell");
-    className.forEach(function (element) {
-        element.addEventListener('click', checkClick);
-    });
+    $(".cell").bind("click", checkClick);
     state = [];
     hasWon = false;
     counter = 0;
 }
 
 const checkClick = (event) => {
-    const id = event.id;
-    getCoords(string);
+    const id = event.target.id;
+    this.getCoords(id);
 }
 
 module.exports.getCoords = function(string){
