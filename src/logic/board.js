@@ -20,6 +20,20 @@ const checkClick = (event) => {
     let y = id.substring(3, 4);
 }
 
+function checkForWinner() {
+    state = game.changeCell(x, y);
+    hasWon = game.hasWon();
+    if (hasWon[0] && hasWon[1]) {
+        alert('It´s a draw!');
+    }
+    else if (hasWon[0] || hasWon[1]) {
+        alert('Congradulations you won!');
+    }
+    else {
+        alert('You lost!');
+    }
+}
+
 function resetGame() {
     game.reset();
     init();
