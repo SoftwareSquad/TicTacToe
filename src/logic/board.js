@@ -14,12 +14,16 @@ function init() {
     counter = 0;
 }
 
-init();
-
 const checkClick = (event) => {
     const id = event.id;
-    let x = id.substring(1, 2);
-    let y = id.substring(3, 4);
+    getCoords(string);
+}
+
+modules.export.getCoords = function(string){
+    let x = string.substring(1, 2);
+    let y = string.substring(3, 4);
+
+    return [x, y];
 }
 
 function checkForWinner() {
