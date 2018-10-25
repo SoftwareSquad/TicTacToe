@@ -14,6 +14,8 @@ function init() {
     counter = 0;
 }
 
+init();
+
 const checkClick = (event) => {
     const id = event.id;
     let x = id.substring(1, 2);
