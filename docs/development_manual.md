@@ -1,16 +1,31 @@
 # Development manual
 
 ### Git
-In this project we use a simple branching workflow, we have 2 branches, master and development. In the development branch write our code and integrate. Only when we have completed a feature we push to the master and deploy.
+In this project we use a simple branching workflow. We have 7 branches, master, development, docuements, indexpage, style, board and game. Only when we have completed a feature we push to the master and deploy.
 
-Before development, you should check for available branches, with the command:
+First you need to create a working copy of a local repository, with the command:
+`git clone username@host:/path/to/repository`
+
+Before coding you should check for available branches, with the command:
 `git branch`
 
-To Switch from the master branch to development branch, enter the command:
-`git checkout development`
+To Switch from one branch to another branch, enter the command:
+`git checkout <filename>`
+
+To create a new branch and switch to it, enter the command:
+`git checkout -b <branchname>`
 
 Before you start coding you should always pull changes that have been made to the repository:
 `git pull`
+
+Before pushing you need to add the files that you have made changes to.
+To add one file use this command:
+`git add <filename>`
+To add many files use this command:
+`git add .`
+
+After adding the file/s you need to make a commit with a message to describe the changes you made, enter the command:
+`git commit -m "Commit message"`
 
 To begin the integration test, you only have to push the branch to github, everything else is automated.
 `git push`
