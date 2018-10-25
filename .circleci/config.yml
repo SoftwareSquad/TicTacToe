@@ -37,6 +37,6 @@ jobs:
       - run: yarn test
 deployment:
   staging:
-    branch: master
+    branch: deploy
     heroku:
       appname: tictactoe-hugb
