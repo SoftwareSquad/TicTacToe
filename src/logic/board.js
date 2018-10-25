@@ -13,3 +13,8 @@ function init() {
     hasWon = false;
     counter = 0;
 }
+
+function resetGame() {
+    game.reset();
+    init();
+}
