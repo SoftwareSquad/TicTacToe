@@ -70,9 +70,9 @@ function person() {
 ### HTML
 
 Headings:
-# <h1>
-## <h2>
-### <h3>
+# H1
+## H2
+### H3
 
 Text:
 **bold text** or __bold text__
