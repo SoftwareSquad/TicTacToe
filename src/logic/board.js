@@ -19,7 +19,7 @@ const checkClick = (event) => {
     getCoords(string);
 }
 
-module.export.getCoords = function(string){
+module.exports.getCoords = function(string){
     let x = string.substring(1, 2);
     let y = string.substring(3, 4);
 
