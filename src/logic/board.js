@@ -4,7 +4,7 @@ let state;
 let hasWon;
 let counter;
 
-function init() {
+module.exports.init = function() {
     var classname = document.getElementsByClassName("cell");
     className.forEach(function (element) {
         element.addEventListener('click', checkClick);
