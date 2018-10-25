@@ -108,3 +108,17 @@ Ordered list:
 
 Links and emails:
 An email <example@example.com> link
+
+### Tests
+We used two kinds of testing in our project, unit testing and end-to-end testing.
+
+CircleCi takes care of the unit tests automatically and pushes the code on to a heroku server which deploys the game.
+If you press on this link: [CircleCi](https://circleci.com/gh/SoftwareSquad) you can see our project on CircleCi.
+
+In the course this year we were supposed to use the Puppeteer for end-to-end tests. To get more information about Puppeteer tests press this link: [Puppeteer](https://github.com/GoogleChrome/puppeteer/blob/master/README.md)
+
+To try Puppeteer tests click here: [Try-puppeteer](https://try-puppeteer.appspot.com/?fbclid=IwAR2lS8HyOa50UntPr5ywcyvSb_ANwEQNB0etPPlGSCAZoL4sC02Nyoco30c)
+
+
+
+
