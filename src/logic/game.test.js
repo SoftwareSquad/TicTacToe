@@ -5,6 +5,10 @@ it("should return the current player", () => {
     expect(game.changePlayer('O')).toBe('X');
 });
 
+it("should return the current player", () => {
+    expect(game.player()).toBe('X');
+});
+
 it("should return if someone won", () => {
     expect(game.hasWon()).toMatchObject([false,false]);
 });
