@@ -10,6 +10,7 @@ var initFunc = {};
 initFunc.init =  function() {
     $(".cell").bind("click", checkClick);
     $(".game-text").text("");
+    $("#player-turn").text(game.player());
     state = state = [
         ['', '', ''],
         ['', '', ''],
