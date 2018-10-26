@@ -24,6 +24,11 @@
   "homepage": "https://github.com/SoftwareSquad/TicTacToe#readme",
   "devDependencies": {
     "circleci": "^0.3.3",
+<<<<<<< HEAD
+=======
+    "codecov": "^3.1.0",
+    "coveralls": "^3.0.2",
+>>>>>>> c0f284b14ce528ce573c84bb4a21b77c5515343c
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
     "mocha-lcov-reporter": "^1.3.0",
@@ -34,5 +39,9 @@
   "dependencies": {
     "express": "^4.16.4",
     "jquery": "^3.3.1"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
