@@ -1,5 +1,6 @@
 const game = require("./game");
 
+
 let state;
 let hasWon;
 let counter;
@@ -68,12 +69,13 @@ function insertPlayers(id) {
 function checkForWinner() {
     hasWon = game.hasWon();
     if (hasWon[0] && hasWon[1]) {
-        alert('It´s a draw!');
+        alert('It is a draw');
         resetGame();
     }
     else if (hasWon[0] || hasWon[1]) {
-        alert('Congradulations you won!');
+        alert('Congratulations you won!');
         resetGame();
+        
     }
 }
 
