@@ -2,7 +2,8 @@ const game = require("./game");
 
 let state;
 let hasWon;
-let counter;
+let playerO = 0;
+let playerX = 0;
 
 var initFunc = {};
 
@@ -11,12 +12,11 @@ initFunc.init =  function() {
     $(".cell").bind("click", checkClick);
     $(".game-text").text("");
     $("#player-turn").text(game.player());
-    state = state = [
+    state = [
         ['', '', ''],
         ['', '', ''],
         ['', '', '']];
     hasWon = false;
-    counter = 0;
 }
 
 module.exports.init = initFunc.init;
@@ -32,7 +32,6 @@ const checkClick = (event) => {
 
     try {
         if (state[coords[1]][coords[0]] != "") {
-            //alreadyClicked();
             return;
         }
 
@@ -43,13 +42,8 @@ const checkClick = (event) => {
     }
     catch (e) {
         console.log(e);
-        //alreadyClicked();
         return;
     }
-}
-
-function alreadyClicked() {
-    alert('Please choose another rate');
 }
 
 //Gets the coordinates from a cell from each id
@@ -73,6 +67,8 @@ function checkForWinner() {
         resetGame();
     }
     else if (hasWon[0] || hasWon[1]) {
+        playerX = (hasWon[0])?playerX+1:playerX;
+        playerO = (hasWon[1]) ? playerO + 1 : playerO;
         alert('Congradulations you won!');
         resetGame();
     }
@@ -82,4 +78,7 @@ function checkForWinner() {
 function resetGame() {
     game.reset();
     initFunc.init();
+
+    $("#x-score").text(playerX);
+    $("#o-score").text(playerO);
 }
