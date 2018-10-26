@@ -31,4 +31,4 @@ To be able to run Software squad's TicTacToe game use this commands:
 We are using [Heroku](https://heroku.com/) for continus delivery. To track heroku's logs and view our apps' status use the following commands:
 - heroku logs --tail --app tictactoe-hugb
 
-To update the app on Heroku, you'll only need to push the app to tha master barnch.
+To update the app on Heroku, you'll only need to push the app to the master branch.
