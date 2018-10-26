@@ -4,41 +4,56 @@ let state;
 let hasWon;
 let counter;
 
-module.exports.init = function() {
+//Makes a new table
+function init() {
     $(".cell").bind("click", checkClick);
-    state = [];
+    $(".game-text").text("");
+    state = state = [
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', '']];
     hasWon = false;
     counter = 0;
 }
 
+//Listens after a click from the table, gets correct coordinates 
+//and inserts correct player(id) and calls check for winner
 const checkClick = (event) => {
     const id = event.target.id;
-    this.getCoords(id);
+    var coords = this.getCoords(id);
+    
+    console.log(state);
+    console.log(coords[1] + ", " + coords[0]);
+
+    try{
+        if (state[coords[1]][coords[0]] != "") {
+            //alreadyClicked();
+            return;
+        }
+
+        insertPlayers(id);
+        state = game.changeCell(coords[0], coords[1]);
+        $("#player-turn").text(game.player());
+        checkForWinner();
+    }
+    catch(e){
+        console.log(e);
+        //alreadyClicked();
+        return;
+    }
 }
 
+function alreadyClicked() {
+    alert('Please choose another rate');
+}
+
+//Gets the coordinates from a cell from each id
 module.exports.getCoords = function(string){
-    let x = parseInt(string.substring(1, 2));
-    let y = parseInt(string.substring(3, 4));
+    let x = parseInt(string.substring(1, 2)) - 1;
+    let y = parseInt(string.substring(3, 4)) - 1;
 
     return [x, y];
 }
 
-function checkForWinner() {
-    state = game.changeCell(x, y);
-    hasWon = game.hasWon();
-    if (hasWon[0] && hasWon[1]) {
-        alert('It´s a draw!');
-    }
-    else if (hasWon[0] || hasWon[1]) {
-        alert('Congradulations you won!');
-    }
-    else {
-        alert('You lost!');
-    }
-}
-
-function resetGame() {
-    game.reset();
-    init();
-}
+module.exports = init;
 
