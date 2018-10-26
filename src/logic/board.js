@@ -5,7 +5,7 @@ let hasWon;
 let counter;
 
 //Makes a new table
-function init() {
+module.exports.init = function() {
     $(".cell").bind("click", checkClick);
     $(".game-text").text("");
     state = state = [
@@ -20,7 +20,7 @@ function init() {
 //and inserts correct player(id) and calls check for winner
 const checkClick = (event) => {
     const id = event.target.id;
-    var coords = this.getCoords(id);
+    var coords = exports.getCoords(id);
     
     console.log(state);
     console.log(coords[1] + ", " + coords[0]);
@@ -76,9 +76,5 @@ function checkForWinner() {
 //Resets the game afer someone won
 function resetGame() {
     game.reset();
-    init();
+    exports.init();
 }
-
-
-module.exports = init;
-
