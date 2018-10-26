@@ -15,6 +15,11 @@ var gameStatus = [
 var currentPlayer = 'X';
 
 //changes a single cell in the grid
+module.exports.player = function(){
+    return currentPlayer;
+}
+
+//changes a single cell in the grid
 module.exports.changeCell = function(x, y){
     gameStatus[y][x] = currentPlayer;
     currentPlayer = this.changePlayer(currentPlayer);
@@ -96,4 +101,4 @@ function checkForPossibilities(possibilaties, player){
     }
 
     return false;
-}
+} 
