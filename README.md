@@ -15,6 +15,8 @@ This project is not about Node or some other technology used in the project. It'
 ### Further information
 - [Development manual](https://github.com/SoftwareSquad/TicTacToe/blob/documents/docs/development_manual.md "Development manual page")
 - [Administrator manual](https://github.com/SoftwareSquad/TicTacToe/blob/master/docs/administration_manual.md "Development manual page")
+- [Design report](https://github.com/SoftwareSquad/TicTacToe/blob/master/docs/administration_manual.md "Design report")
+
 
 ### Group members - SoftwareSquad
 - Ívar Óli Sigurðsson
