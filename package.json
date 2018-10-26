@@ -8,6 +8,10 @@
     "start": "node app.js",
     "build": "webpack"
   },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/SoftwareSquad/TicTacToe.git"
@@ -20,7 +24,6 @@
   "homepage": "https://github.com/SoftwareSquad/TicTacToe#readme",
   "devDependencies": {
     "circleci": "^0.3.3",
-    "coveralls": "^3.0.2",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
     "mocha-lcov-reporter": "^1.3.0",
