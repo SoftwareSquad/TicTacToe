@@ -1,7 +1,7 @@
 # Development manual
 
 ### Git
-In this project we use a simple branching workflow. We have 7 branches, master, development, docuements, indexpage, style, board and game. Only when we have completed a feature we push to the master and deploy.
+In this project we use a simple branching workflow. We have 7 branches, codecoverage, master, development, deploy, docuements, indexpage, style, board and game. Only when we have completed a feature we push to the master and deploy.
 
 First you need to create a working copy of a local repository, with the command:
 `git clone username@host:/path/to/repository`
@@ -60,7 +60,7 @@ We use , to seperate the values in the array.
 ```javascript
 var array = ['a', 'b', 'c', 0, 1, 2];
 ```
-To access items from the array we use .
+To access items from the array, we use :
 
 ```javascript
 var array = {
@@ -74,14 +74,6 @@ array.item2;
 ```
 
 
-
-```javascript
-function person() {
-  firstName: "John",
-  lastName: "Smith",
-  age: 25
-};
-```
 ### HTML
 
 Headings:
