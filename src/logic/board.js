@@ -4,8 +4,10 @@ let state;
 let hasWon;
 let counter;
 
+var initFunc = {};
+
 //Makes a new table
-function init() {
+initFunc.init =  function() {
     $(".cell").bind("click", checkClick);
     $(".game-text").text("");
     state = state = [
@@ -15,6 +17,8 @@ function init() {
     hasWon = false;
     counter = 0;
 }
+
+module.exports.init = initFunc.init;
 
 //Listens after a click from the table, gets correct coordinates 
 //and inserts correct player(id) and calls check for winner
@@ -76,7 +80,5 @@ function checkForWinner() {
 //Resets the game afer someone won
 function resetGame() {
     game.reset();
-    init();
+    initFunc.init();
 }
-
-module.exports = init;
