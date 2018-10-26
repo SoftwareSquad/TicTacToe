@@ -55,5 +55,30 @@ module.exports.getCoords = function(string){
     return [x, y];
 }
 
+//Inserts X or O into the table
+function insertPlayers(id) {
+    $("#" + id + " .game-text").text(game.player());
+}
+
+//Checks if someone won the game - calls hasWon from game.js
+function checkForWinner() {
+    hasWon = game.hasWon();
+    if (hasWon[0] && hasWon[1]) {
+        alert('It´s a draw!');
+        resetGame();
+    }
+    else if (hasWon[0] || hasWon[1]) {
+        alert('Congradulations you won!');
+        resetGame();
+    }
+}
+
+//Resets the game afer someone won
+function resetGame() {
+    game.reset();
+    init();
+}
+
+
 module.exports = init;
 
