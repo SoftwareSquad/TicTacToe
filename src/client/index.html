@@ -6,8 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tic Tac Toe</title>
+
+    <!-- Jquery -->
+    <script type="text/javascript" src="/lib/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Container holding the actual game board -->
     <div class="overlay">
@@ -15,18 +32,22 @@
         <button type="button" name="btn-play-again" class="btn-play-again">Play Again</button>
     </div>
     <div class="game-scoreX">
-            <H2>X'S SCORE: <div id="x-score">0</div></H2>
-        </div>
+        <H2>X'S SCORE:
+            <div id="x-score">0</div>
+        </H2>
+    </div>
 
-        <div class="game-scoreO">
-            <H2>O'S SCORE: <div id="o-score">0</div></H2>
-        </div>
+    <div class="game-scoreO">
+        <H2>O'S SCORE:
+            <div id="o-score">0</div>
+        </H2>
+    </div>
 
 
     <div class="game">
         <nav class="navbar navbar-default">
             <h1>TIC TAC TOE</h1>
-          </nav>
+        </nav>
         <!-- Row in the game board -->
         <div class="row" id="row-1">
             <!-- individual cell in the game board -->
@@ -63,13 +84,11 @@
             </div>
         </div>
         <div class="game-current-player">
-                <h1>IT'S <div id="player-turn">X</div>'S TURN</h1>
-            </div>
-    
-    </div>
-    
+            <h1>IT'S
+                <div id="player-turn">X</div>'S TURN</h1>
+        </div>
 
-    <script type="text/javascript" src="/lib/jquery.min.js"></script>
+    </div>
 </body>
 
 </html>
