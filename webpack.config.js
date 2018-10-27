@@ -11,6 +11,18 @@ var config = {
         path: DIST_DIR,
         filename: "main.min.js"
     },
+    module: {
+        rules: [
+            {
+                test: /\.js?/,
+                include: SRC_DIR,
+                loader: "babel-loader",
+                query: {
+                    presets:["es2015"]
+                }
+            }
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: SRC_DIR + "/index.html"
