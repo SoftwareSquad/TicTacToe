@@ -1,4 +1,5 @@
 const puppeteer = require("puppeteer");
+const game = require("../logic/game");
 
   describe("Localhost screenshots", () => {
   let browser, page;
@@ -19,9 +20,11 @@ const puppeteer = require("puppeteer");
     await page.setViewport({ width: 1440, height: 800 });
     await page.goto(url);
 
+    expect(game.player()).toBe('X');
     await page.click("#c1-1");//x
+    expect(game.player()).toBe('O');
 
-    await page.screenshot({path: "docs/screenshot2.png"});
+
     browser.close();
   }, 5000);
 });
