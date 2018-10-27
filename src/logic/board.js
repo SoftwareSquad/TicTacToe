@@ -88,7 +88,7 @@ function checkForWinner() {
     else if (hasWon[0] || hasWon[1]) {
         playerX = (hasWon[0]) ? playerX + 1 : playerX;
         playerO = (hasWon[1]) ? playerO + 1 : playerO;
-        var winner = (game.player == 'X')?'O':'X';
+        var winner = (game.player() == 'X')?'O':'X';
 
 
         $('#winner').text("The Winner Is: " + winner);
