@@ -10,6 +10,8 @@ var initFunc = {};
 
 //Makes a new table
 initFunc.init = function () {
+    $('.overlay').hide();
+
     $(".cell").bind("click", checkClick);
     $(".game-text").text("");
     $("#player-turn").text(game.player());
@@ -71,27 +73,35 @@ function insertPlayers(id) {
 function checkForWinner() {
     hasWon = game.hasWon();
     if (hasWon[0] && hasWon[1]) {
-        document.getElementById('winner').innerHTML = `The Winner Is: No one, it's a draw`;
+        $('#winner').text("The Winner Is: No one, it's a draw");
+        $('.overlay').show();
+        
+        $('.overlay').fadeIn();
         $('.overlay').fadeIn();
         $('.btn-play-again').click(function () {
             resetGame();
             $('.overlay').fadeOut();
+            $('.overlay').hide();
             return;
         });
-        //alert('It´s a draw!');
-        //resetGame();
     }
     else if (hasWon[0] || hasWon[1]) {
         playerX = (hasWon[0]) ? playerX + 1 : playerX;
         playerO = (hasWon[1]) ? playerO + 1 : playerO;
+        var winner = (game.player == 'X')?'O':'X';
+
+
+        $('#winner').text("The Winner Is: " + winner);
+        $('.overlay').show();
         $('.overlay').fadeIn();
+
+        
         $('.btn-play-again').click(function () {
             resetGame();
             $('.overlay').fadeOut();
+            $('.overlay').hide();
             return;
         });
-        //alert('Congradulations you won!');
-        //resetGame();
     }
 }
 
