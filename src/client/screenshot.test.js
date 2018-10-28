@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
   let url = "https://tictactoe-hugb.herokuapp.com/";
 
   beforeEach(async () => {
-    browser = await puppeteer.launch({ headless: false, slowMo: 0 });
+    browser = await puppeteer.launch({headless: false, slowMo: 0, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
     page = await browser.newPage();
   });
 
