@@ -1,16 +1,31 @@
 # Development manual
 
 ### Git
-In this project we use a simple branching workflow, we have 2 branches, master and development. In the development branch write our code and integrate. Only when we have completed a feature we push to the master and deploy.
+In this project we use a simple branching workflow. We have 7 branches, codecoverage, master, development, deploy, docuements, indexpage, style, board and game. Only when we have completed a feature we push to the master and deploy.
 
-Before development, you should check for available branches, with the command:
+First you need to create a working copy of a local repository, with the command:
+`git clone username@host:/path/to/repository`
+
+Before coding you should check for available branches, with the command:
 `git branch`
 
-To Switch from the master branch to development branch, enter the command:
-`git checkout development`
+To Switch from one branch to another branch, enter the command:
+`git checkout <filename>`
+
+To create a new branch and switch to it, enter the command:
+`git checkout -b <branchname>`
 
 Before you start coding you should always pull changes that have been made to the repository:
 `git pull`
+
+Before pushing you need to add the files that you have made changes to.
+To add one file use this command:
+`git add <filename>`
+To add many files use this command:
+`git add .`
+
+After adding the file/s you need to make a commit with a message to describe the changes you made, enter the command:
+`git commit -m "Commit message"`
 
 To begin the integration test, you only have to push the branch to github, everything else is automated.
 `git push`
@@ -45,7 +60,7 @@ We use , to seperate the values in the array.
 ```javascript
 var array = ['a', 'b', 'c', 0, 1, 2];
 ```
-To access items from the array we use .
+To access items from the array, we use :
 
 ```javascript
 var array = {
@@ -59,20 +74,12 @@ array.item2;
 ```
 
 
-
-```javascript
-function person() {
-  firstName: "John",
-  lastName: "Smith",
-  age: 25
-};
-```
 ### HTML
 
 Headings:
-# <h1>
-## <h2>
-### <h3>
+# H1
+## H2
+### H3
 
 Text:
 **bold text** or __bold text__
@@ -93,3 +100,17 @@ Ordered list:
 
 Links and emails:
 An email <example@example.com> link
+
+### Tests
+We used two kinds of testing in our project, unit testing and end-to-end testing.
+
+CircleCi takes care of the unit tests automatically and pushes the code on to a heroku server which deploys the game.
+If you press on this link: [CircleCi](https://circleci.com/gh/SoftwareSquad) you can see our project on CircleCi.
+
+In the course this year we were supposed to use the Puppeteer for end-to-end tests. To get more information about Puppeteer tests press this link: [Puppeteer](https://github.com/GoogleChrome/puppeteer/blob/master/README.md)
+
+To try Puppeteer tests click here: [Try-puppeteer](https://try-puppeteer.appspot.com/?fbclid=IwAR2lS8HyOa50UntPr5ywcyvSb_ANwEQNB0etPPlGSCAZoL4sC02Nyoco30c)
+
+
+
+
