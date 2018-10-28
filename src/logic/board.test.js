@@ -11,4 +11,3 @@ it("should test if the cells match", () => {
   expect(board.getCoords("c3-2")).toMatchObject([2,1]);
   expect(board.getCoords("c3-3")).toMatchObject([2,2]);
 });
-
