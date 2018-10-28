@@ -4,7 +4,10 @@
   "description": "Síðannar verkefni í hugbúnaðarfræði",
   "main": "app.js",
   "scripts": {
-    "test": "jest",
+    "test": "npm run test-logic && npm run test-api",
+    "test-logic": "jest src/logic",
+    "test-api": "jest src/server",
+    "test-all": "jest",
     "start": "node app.js",
     "build": "webpack"
   },
