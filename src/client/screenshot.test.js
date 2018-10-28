@@ -19,6 +19,8 @@ const puppeteer = require("puppeteer");
     await page.setViewport({ width: 1440, height: 800 });
     await page.goto(url);
 
+
+    //clicks
     await page.click("#c1-1");//x
     var c11 = await page.evaluate(() => document.querySelector('#c1-1').innerText);
     expect(c11).toBe('X');
@@ -39,7 +41,12 @@ const puppeteer = require("puppeteer");
     var c31 = await page.evaluate(() => document.querySelector('#c3-1').innerText);
     expect(c31).toBe('X');
 
-    //await page.screenshot({path: "docs/screenshots/screenshot.png"});
+    //check for winner
+    var winner  = await page.evaluate(() => document.querySelector('#winner').innerText);
+    expect(winner).toBe('The Winner Is: X');
+
+    //scrrenshot
+    await page.screenshot({path: "docs/screenshots/screenshot.png"});
 
     browser.close();
   }, 7000);
