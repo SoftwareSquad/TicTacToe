@@ -1,21 +1,26 @@
 const game = require("./game");
 
+
 let state;
 let hasWon;
-let counter;
+let playerO = 0;
+let playerX = 0;
 
 var initFunc = {};
 
 //Makes a new table
-initFunc.init =  function() {
+initFunc.init = function () {
+    $('.overlay').hide();
+
     $(".cell").bind("click", checkClick);
     $(".game-text").text("");
+    $("#player-turn").text(game.player());
     state = state = [
         ['', '', ''],
         ['', '', ''],
         ['', '', '']];
     hasWon = false;
-    counter = 0;
+    counter = 0; 
 }
 
 module.exports.init = initFunc.init;
@@ -68,12 +73,35 @@ function insertPlayers(id) {
 function checkForWinner() {
     hasWon = game.hasWon();
     if (hasWon[0] && hasWon[1]) {
-        alert('It´s a draw!');
-        resetGame();
+        $('#winner').text("The Winner Is: No one, it's a draw");
+        $('.overlay').show();
+        
+        $('.overlay').fadeIn();
+        $('.overlay').fadeIn();
+        $('.btn-play-again').click(function () {
+            resetGame();
+            $('.overlay').fadeOut();
+            $('.overlay').hide();
+            return;
+        });
     }
     else if (hasWon[0] || hasWon[1]) {
-        alert('Congradulations you won!');
-        resetGame();
+        playerX = (hasWon[0]) ? playerX + 1 : playerX;
+        playerO = (hasWon[1]) ? playerO + 1 : playerO;
+        var winner = (game.player() == 'X')?'O':'X';
+
+
+        $('#winner').text("The Winner Is: " + winner);
+        $('.overlay').show();
+        $('.overlay').fadeIn();
+
+        
+        $('.btn-play-again').click(function () {
+            resetGame();
+            $('.overlay').fadeOut();
+            $('.overlay').hide();
+            return;
+        });
     }
 }
 
@@ -81,4 +109,7 @@ function checkForWinner() {
 function resetGame() {
     game.reset();
     initFunc.init();
+
+    $("#x-score").text(playerX);
+    $("#o-score").text(playerO);
 }

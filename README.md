@@ -13,8 +13,10 @@ This project is not about Node or some other technology used in the project. It'
 - Git and the various workflows associated with git (we use branching wokflow)
 
 ### Further information
-- [Development manual](https://github.com/SoftwareSquad/TicTacToe/blob/documents/docs/development_manual.md "Development manual page")
+- [Development manual](https://github.com/SoftwareSquad/TicTacToe/blob/master/docs/development_manual.md)
 - [Administrator manual](https://github.com/SoftwareSquad/TicTacToe/blob/master/docs/administration_manual.md "Development manual page")
+- [Design report](https://github.com/SoftwareSquad/TicTacToe/blob/master/docs/design_report.md)
+
 
 ### Group members - SoftwareSquad
 - Ívar Óli Sigurðsson
