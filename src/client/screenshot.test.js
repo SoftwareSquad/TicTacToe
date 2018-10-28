@@ -1,5 +1,4 @@
 const puppeteer = require("puppeteer");
-const game = require("../logic/game");
 
   describe("Localhost screenshots", () => {
   let browser, page;
@@ -14,17 +13,34 @@ const game = require("../logic/game");
     browser.close();
   });
 
-  test("Save a screenshot after click", async () => {
+  test("Test clicks on elements", async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.setViewport({ width: 1440, height: 800 });
     await page.goto(url);
 
-    expect(game.player()).toBe('X');
     await page.click("#c1-1");//x
-    expect(game.player()).toBe('O');
+    var c11 = await page.evaluate(() => document.querySelector('#c1-1').innerText);
+    expect(c11).toBe('X');
 
+    await page.click("#c1-2");//o
+    var c12 = await page.evaluate(() => document.querySelector('#c1-2').innerText);
+    expect(c12).toBe('O');
+
+    await page.click("#c2-1");//x
+    var c21 = await page.evaluate(() => document.querySelector('#c2-1').innerText);
+    expect(c21).toBe('X');
+
+    await page.click("#c2-2");//o
+    var c22 = await page.evaluate(() => document.querySelector('#c2-2').innerText);
+    expect(c22).toBe('O');
+
+    await page.click("#c3-1");//x
+    var c31 = await page.evaluate(() => document.querySelector('#c3-1').innerText);
+    expect(c31).toBe('X');
+
+    //await page.screenshot({path: "docs/screenshots/screenshot.png"});
 
     browser.close();
-  }, 5000);
+  }, 7000);
 });
