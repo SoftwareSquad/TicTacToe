@@ -6,24 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tic Tac Toe</title>
+
+    <!-- Jquery -->
+    <script type="text/javascript" src="/lib/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Container holding the actual game board -->
-    
+    <div class="overlay">
+        <div class="info-container">
+            <h1 id="winner">The Winner Is: </h1>
+            <button type="button" name="btn-play-again" class="btn-play-again">Play Again</button>
+        </div>
+    </div>
     <div class="game-scoreX">
-            <H2>X'S SCORE: <div id="x-score">0</div></H2>
-        </div>
+        <H2>X'S SCORE:
+            <div id="x-score">0</div>
+        </H2>
+    </div>
 
-        <div class="game-scoreO">
-            <H2>O'S SCORE: <div id="x-score">0</div></H2>
-        </div>
+    <div class="game-scoreO">
+        <H2>O'S SCORE:
+            <div id="o-score">0</div>
+        </H2>
+    </div>
 
 
     <div class="game">
         <nav class="navbar navbar-default">
             <h1>TIC TAC TOE</h1>
-          </nav>
+        </nav>
         <!-- Row in the game board -->
         <div class="row" id="row-1">
             <!-- individual cell in the game board -->
@@ -60,13 +73,11 @@
             </div>
         </div>
         <div class="game-current-player">
-                <h1>IT'S <div id="player-turn">X</div>'S TURN</h1>
-            </div>
-    
-    </div>
-    
+            <h1>IT'S
+                <div id="player-turn">X</div>'S TURN</h1>
+        </div>
 
-    <script type="text/javascript" src="/lib/jquery.min.js"></script>
+    </div>
 </body>
 
 </html>
