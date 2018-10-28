@@ -27,11 +27,8 @@
     "babel-loader": "^7.1.5",
     "babel-preset-es2015": "^6.24.1",
     "circleci": "^0.3.3",
-<<<<<<< HEAD
-=======
     "codecov": "^3.1.0",
     "coveralls": "^3.0.2",
->>>>>>> a2903d6b7734a76c46105b0c7f886d88017cf5ee
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
     "mocha-lcov-reporter": "^1.3.0",
