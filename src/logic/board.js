@@ -20,7 +20,7 @@ initFunc.init = function () {
         ['', '', ''],
         ['', '', '']];
     hasWon = false;
-    counter = 0;
+    counter = 0; 
 }
 
 module.exports.init = initFunc.init;
