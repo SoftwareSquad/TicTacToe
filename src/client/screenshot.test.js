@@ -23,6 +23,7 @@ const game = require("../logic/game");
     expect(game.player()).toBe('X');
     await page.click("#c1-1");//x
     expect(game.player()).toBe('O');
+    
 
 
     browser.close();
