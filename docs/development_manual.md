@@ -1,7 +1,7 @@
 # Development manual
 
 ### Git
-In this project we use a simple branching workflow. We have 7 branches, master, development, docuements, indexpage, style, board and game. Only when we have completed a feature we push to the master and deploy.
+In this project we use a simple branching workflow. We have 7 branches, codecoverage, master, development, deploy, docuements, indexpage, style, board and game. Only when we have completed a feature we push to the master and deploy.
 
 First you need to create a working copy of a local repository, with the command:
 `git clone username@host:/path/to/repository`
@@ -60,7 +60,7 @@ We use , to seperate the values in the array.
 ```javascript
 var array = ['a', 'b', 'c', 0, 1, 2];
 ```
-To access items from the array we use .
+To access items from the array, we use :
 
 ```javascript
 var array = {
@@ -74,14 +74,6 @@ array.item2;
 ```
 
 
-
-```javascript
-function person() {
-  firstName: "John",
-  lastName: "Smith",
-  age: 25
-};
-```
 ### HTML
 
 Headings:
@@ -108,3 +100,17 @@ Ordered list:
 
 Links and emails:
 An email <example@example.com> link
+
+### Tests
+We used two kinds of testing in our project, unit testing and end-to-end testing.
+
+CircleCi takes care of the unit tests automatically and pushes the code on to a heroku server which deploys the game.
+If you press on this link: [CircleCi](https://circleci.com/gh/SoftwareSquad) you can see our project on CircleCi.
+
+In the course this year we were supposed to use the Puppeteer for end-to-end tests. To get more information about Puppeteer tests press this link: [Puppeteer](https://github.com/GoogleChrome/puppeteer/blob/master/README.md)
+
+To try Puppeteer tests click here: [Try-puppeteer](https://try-puppeteer.appspot.com/?fbclid=IwAR2lS8HyOa50UntPr5ywcyvSb_ANwEQNB0etPPlGSCAZoL4sC02Nyoco30c)
+
+
+
+
