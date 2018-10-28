@@ -1,4 +1,3 @@
-
 /**
  * Determins who's turn it is
  * Holds the game status
