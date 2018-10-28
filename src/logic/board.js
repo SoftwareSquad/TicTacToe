@@ -1,6 +1,5 @@
 const game = require("./game");
 
-
 let state;
 let hasWon;
 let playerO = 0;
@@ -15,13 +14,13 @@ initFunc.init = function () {
     $(".cell").bind("click", checkClick);
     $(".game-text").text("");
     $("#player-turn").text(game.player());
+  
     state = state = [
         ['', '', ''],
         ['', '', ''],
         ['', '', '']];
     hasWon = false;
     counter = 0; 
-}
 
 module.exports.init = initFunc.init;
 
@@ -102,6 +101,7 @@ function checkForWinner() {
             $('.overlay').hide();
             return;
         });
+
     }
 }
 

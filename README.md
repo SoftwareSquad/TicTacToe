@@ -1,4 +1,6 @@
-[![CircleCI](https://circleci.com/gh/SoftwareSquad/TicTacToe.svg?style=svg)](https://circleci.com/gh/SoftwareSquad/TicTacToe)
+[![CircleCI](https://circleci.com/gh/SoftwareSquad/TicTacToe.svg?style=svg)](https://circleci.com/gh/SoftwareSquad/TicTacToe) [![codecov](https://codecov.io/gh/SoftwareSquad/TicTacToe/branch/codecoverage/graph/badge.svg)](https://codecov.io/gh/SoftwareSquad/TicTacToe/branch/codecoverage)
+[![circleci](https://img.shields.io/circleci/project/github/SoftwareSquad/TicTacToe/deploy.svg)](https://tictactoe-hugb.herokuapp.com/)
+
 # TicTacToe
 ## Hugbúnaðarfræði - Late term project
 
