@@ -48,7 +48,7 @@ module.exports.hasWon = function(){
     if(checkForDraw(gameStatus)){
         return [true, true];
     }
-
+    return [true, true];
     return [checkForPossibilities(possibilaties, 'X'),checkForPossibilities(possibilaties, 'O')];
 }
 
